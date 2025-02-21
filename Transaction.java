@@ -18,6 +18,6 @@ public class Transaction {
         return amount;
     }
     public String toString(){
-    return (month +"/"+ day +" : $"+ amount);
+    return ("("+month +"/"+ day +":$"+ amount+") ");
     }
 }

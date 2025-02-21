@@ -13,6 +13,7 @@ public class Person{
         ID = IDgen;
         name=myName;
         IDgen++;
+        Transactions = new ArrayList<Transaction>();
     }
 
     //Functions
@@ -38,21 +39,25 @@ public class Person{
     public void pay(int month, int day, int payment){
         balance +=payment;
         Transactions.add(new Transaction(month,day,payment));
-        System.out.println( name +" has added money to their account."+name+" has"+ balance+ "$ in their account.");
+        System.out.println( name + " has added money to their account. They have "+ balance+ "$ in their account.");
     }
 
     public void displayPerson(){
             System.out.println("Student: "+ name+" ID: " +ID+" Balance: $"+balance+" Transactions: ");
             if(Transactions!=null){
-                System.out.print(Transactions);
+                for(Transaction tf:Transactions){
+                System.out.print(tf.toString());
+            }
             }
     }
     public String TransactionsByDate(int month, int day){
         String x = "";
-        for(int i = 0; i<Transactions.size();i++){
-            if(Transactions.get(i).getMonth()== month && Transactions.get(i).getDay() == day){
-                x+=Transactions.get(i).toString();
-                x+="\n";
+        if(Transactions!=null){
+            for(int i = 0; i<Transactions.size();i++){
+                if(Transactions.get(i).getMonth()== month && Transactions.get(i).getDay() == day){
+                    x+=Transactions.get(i).toString();
+                    x+="\n";
+                }
             }
         }
         return x;

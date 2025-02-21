@@ -2,6 +2,7 @@ import java.util.ArrayList;
 public class Manager {
     private ArrayList<Person> ppl;
     public Manager(){
+        ppl= new ArrayList<Person>();
     }
     public Person get(int i){
         return ppl.get(i);
@@ -13,13 +14,15 @@ public class Manager {
         }
         return s;
     }
-    public String displayByID(int num){
+    public void displayByID(int num){
         for(int i = 0;i<ppl.size(); i++){
             if(ppl.get(i).getID()==num){
-                return ppl.get(i).toString();
+                ppl.get(i).displayPerson();
+            }
+            else if(i==ppl.size()){
+                System.out.println("Sorry, there are no students with this ID");
             }
         }
-        return "Sorry, there are no students with this ID";
     }
     public String displayNegativePeople(){
         String Negative = "";
@@ -32,7 +35,7 @@ public class Manager {
         return Negative;
     }
 
-    public void add(Person Person){
-        ppl.add(Person);
+    public void add(Person j){
+        ppl.add(j);
     }
 }
