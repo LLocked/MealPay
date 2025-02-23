@@ -55,7 +55,7 @@ public class Person{
         if(Transactions!=null){
             for(int i = 0; i<Transactions.size();i++){
                 if(Transactions.get(i).getMonth()== month && Transactions.get(i).getDay() == day){
-                    x+=Transactions.get(i).toString();
+                    x+=(Transactions.get(i).toString()+"by "+name+ " ID: "+ getID());
                     x+="\n";
                 }
             }

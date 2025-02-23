@@ -37,7 +37,7 @@ public class MealPayProject {
             allPeople.displayByID(0);
 
             System.out.println("Displaying all transactions made on 1/9");
-            allPeople.transactionsByDay(1, 9);
+            System.out.println(allPeople.transactionsByDay(1, 9));
             
 
         }
