@@ -18,17 +18,26 @@ public class MealPayProject {
             allPeople.get(2).displayPerson();
             int testmonth = 1;
             int testday = 10;
-
-            System.out.println("Displaying just those with negative balances...");
+            System.out.println("Making a couple payments...");
             allPeople.get(0).pay(testmonth, testday, 10);
             allPeople.get(0).pay(testmonth, testday, 100);
             allPeople.get(0).pay(testmonth, testday, 1000);
+            allPeople.get(1).buy(1,9);
+            allPeople.get(1).buy(1,9);
+            allPeople.get(1).buy(1,9);
+            allPeople.get(1).buy(1,9);
+            allPeople.get(1).pay(1,9,10);
+            
 
             System.out.println("Displaying just those with negative balances...");
-            System.out.println(allPeople.displayNegativePeople());
+            allPeople.displayNegativePeople();
+            
 
             System.out.println("Looking up student with ID number of 0:");
             allPeople.displayByID(0);
+
+            System.out.println("Displaying all transactions made on 1/9");
+            allPeople.transactionsByDay(1, 9);
             
 
         }

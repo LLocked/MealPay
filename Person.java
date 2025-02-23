@@ -33,13 +33,13 @@ public class Person{
     public void buy(int month, int day){
         balance -=7;
         Transactions.add(new Transaction(month,day,-7));
-        System.out.println( name +" bought a lunch."+name+" has"+ balance+ "$ in their account.");
+        System.out.println( name +" bought a lunch. "+name+" has $"+ balance+ " in their account.");
     }
 
     public void pay(int month, int day, int payment){
         balance +=payment;
         Transactions.add(new Transaction(month,day,payment));
-        System.out.println( name + " has added money to their account. They have "+ balance+ "$ in their account.");
+        System.out.println( name + " has added $"+payment+" to their account. They have $"+ balance+ " in their account.");
     }
 
     public void displayPerson(){

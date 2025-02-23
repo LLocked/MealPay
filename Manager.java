@@ -18,21 +18,21 @@ public class Manager {
         for(int i = 0;i<ppl.size(); i++){
             if(ppl.get(i).getID()==num){
                 ppl.get(i).displayPerson();
+                System.out.println("\n");
             }
             else if(i==ppl.size()){
                 System.out.println("Sorry, there are no students with this ID");
+                System.out.println("\n");
             }
         }
     }
-    public String displayNegativePeople(){
-        String Negative = "";
+    public void displayNegativePeople(){
         for(int i = 0;i<ppl.size(); i++){
             if(ppl.get(i).getBalance()<0){
-                Negative+=ppl.get(i).toString();
-                Negative+="\n";
+                ppl.get(i).displayPerson();
+                System.out.println("\n");
             }
         }
-        return Negative;
     }
 
     public void add(Person j){
