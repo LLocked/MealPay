@@ -43,11 +43,12 @@ public class Person{
     }
 
     public void displayPerson(){
-            System.out.println("Student: "+ name+" ID: " +ID+" Balance: $"+balance+" Transactions: ");
+            System.out.print("Student: "+ name+" ID: " +ID+" Balance: $"+balance+" Transactions: ");
             if(Transactions!=null){
                 for(Transaction tf:Transactions){
                 System.out.print(tf.toString());
             }
+            System.out.println("");
             }
     }
     public String TransactionsByDate(int month, int day){

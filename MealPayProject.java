@@ -22,7 +22,7 @@ public class MealPayProject {
             allPeople.get(0).pay(testmonth, testday, 10);
             allPeople.get(0).pay(testmonth, testday, 100);
             allPeople.get(0).pay(testmonth, testday, 1000);
-            allPeople.get(1).buy(1,9);
+            allPeople.get(0).buy(1,9);
             allPeople.get(1).buy(1,9);
             allPeople.get(1).buy(1,9);
             allPeople.get(1).buy(1,9);
@@ -38,6 +38,11 @@ public class MealPayProject {
 
             System.out.println("Displaying all transactions made on 1/9");
             System.out.println(allPeople.transactionsByDay(1, 9));
+
+            System.out.println("Displaying students...");
+            allPeople.get(0).displayPerson();
+            allPeople.get(1).displayPerson();
+            allPeople.get(2).displayPerson();
             
 
         }
